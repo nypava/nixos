@@ -14,6 +14,14 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Setup partitions
+  fileSystems."/home" = {
+   device = "/dev/nvme0n1p8";
+    fsType = "ext4";
+ };
+
+
+
   # Set your time zone.
   time.timeZone = "Africa/Addis_Ababa";
 
@@ -21,6 +29,7 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   users.users.marble = {
+    home = "/home/marble";
     isNormalUser = true;
     description = "marble";
     shell = pkgs.zsh;
