@@ -2,6 +2,7 @@
   programs.firefox.enable = true;
   programs.localsend.enable = true;
   programs.zsh.enable = true;
+  programs.nix-ld.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -14,6 +15,12 @@
     proxychains-ng
     alsa-utils
     dunst
+    bind
+    hypridle
+    hyprpaper
+    mekuteriya
+    lemurs
+    libnotify
   ];
 
 }
