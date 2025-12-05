@@ -20,8 +20,6 @@
     fsType = "ext4";
  };
 
-
-
   # Set your time zone.
   time.timeZone = "Africa/Addis_Ababa";
 
@@ -38,5 +36,5 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  system.stateVersion = "25.05"; 
+  system.stateVersion = "25.11"; 
 }
