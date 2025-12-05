@@ -3,9 +3,14 @@
   services.xserver = {
     enable = true;
     desktopManager.gnome.enable = true;
-    displayManager.gdm.enable = true;
   };
-  
+  #
+  # services.displayManager = {
+  #   enable = true;
+  #   defaultSession = "hyprland";
+  #   execCmd = lib.mkForce "${pkgs.lemurs}/bin/lemurs --no-log";
+  # };
+  services.displayManager.ly.enable = true;
   # Enable wlr xdg portal
   xdg.portal.wlr.enable = true; 
 
@@ -14,11 +19,13 @@
     layout = "us";
     variant = "";
   };
-
+  
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
   };
+
+  programs.hyprland.enable = true;
 
   programs.waybar.enable = true;
 }
